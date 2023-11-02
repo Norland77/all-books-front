@@ -1,0 +1,52 @@
+.sidebar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 5%;
+  background-color: #263F44;
+  height: calc(100% - 100px);
+  padding: 15px;
+  gap: 80px;
+  overflow: hidden;
+  transition-duration: .3s;
+  &:hover {
+    max-width: 15%;
+    transition-duration: .3s;
+    .link {
+      span {
+        opacity: 1;
+        transition-duration: .3s;
+      }
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+    padding: 0 20px;
+    .link {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      span {
+        opacity: 0;
+        transition-duration: .3s;
+        color: #B8B9B1;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 200px;
+      }
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
