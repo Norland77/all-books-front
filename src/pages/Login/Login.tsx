@@ -12,7 +12,6 @@ const Login: FC = () => {
     email: '',
     password: ''
   })
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target
     setFormData((prevValues) => ({
@@ -30,7 +29,13 @@ const Login: FC = () => {
       const user: ILoginResponse = {
         id: loginRes.id,
         username: loginRes.username,
-        avatar: loginRes.avatar
+        avatar: loginRes.avatar,
+        role: loginRes.role
+      }
+      if (user.role.includes('ADMIN')) {
+        dispatch({ type: 'SET_ADMIN', payload: true })
+      } else {
+        dispatch({ type: 'SET_ADMIN', payload: false })
       }
       dispatch({ type: 'SET_TOKEN', payload: token })
       dispatch({ type: 'SET_USER', payload: user })

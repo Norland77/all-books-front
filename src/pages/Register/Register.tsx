@@ -56,14 +56,11 @@ const Register: FC = () => {
       genderName: formData.gender,
       country: formData.country
     }, { withCredentials: true }).then(res => {
-      console.log(res)
       if (res.statusText === 'Created') {
         alert('Ви успішно зареєструвались, тепер можете увійти використавши email та пароль')
         navigate('/login')
       }
     }).catch(err => {
-      console.log(err)
-      console.log(err.response.data.message)
       if (err.response.data.message === 'This username or email is already in use') {
         setIsValidLoginAndEmail(false)
       }
@@ -77,7 +74,6 @@ const Register: FC = () => {
     await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/gender/all`).then(res => {
       const allGenders = res.data
       setGenders(allGenders)
-      console.log(allGenders)
     })
   }
 
@@ -87,7 +83,7 @@ const Register: FC = () => {
   return (
     <div className={styles.register}>
       <div>
-        <h2>Логін</h2>
+        <h2>Реєстрація</h2>
         <form className={styles.register__blok}>
           <div>
             {/* Зробити завантаження картинок */}

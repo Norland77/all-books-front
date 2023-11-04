@@ -10,8 +10,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 
 const Header = (): ReactElement<any, any> => {
-  const { isLogin } = useTypedSelector(state => state.auth)
-  const { user } = useTypedSelector(state => state.auth)
+  const { user, isLogin } = useTypedSelector(state => state.auth)
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const logout = async (): Promise<void> => {
@@ -20,11 +19,11 @@ const Header = (): ReactElement<any, any> => {
     }).then(res => {
       if (res.data === 'OK') {
         dispatch({ type: 'SET_LOGIN', payload: false })
+        dispatch({ type: 'SET_ADMIN', payload: false })
         navigate('/')
       }
     })
   }
-
   return (
       <>
           <header>

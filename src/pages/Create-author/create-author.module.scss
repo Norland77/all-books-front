@@ -1,0 +1,120 @@
+.login {
+  margin-left: 5%;
+  width: 95%;
+  margin-top: 100px;
+  height: 100vh;
+  background-color: #1B2D31;
+  div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 55px;
+    > .login_block {
+      display: flex;
+      gap: 15px;
+      flex-direction: row;
+      align-items: start;
+      > div {
+        gap: 20px;
+        > span {
+          color: #35ff00;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: normal;
+          display: block;
+        }
+      }
+    }
+    h2 {
+      color: #C9E4E7;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    input {
+      border-radius: 20px;
+      background: #263F44;
+      height: 60px;
+      width: 550px;
+      border: none;
+      color: #789E9F;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      padding: 5px 70px;
+    }
+    textarea {
+      border-radius: 20px;
+      background: #263F44;
+      height: 250px;
+      width: 550px;
+      border: none;
+      color: #789E9F;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      padding: 5px 70px;
+    }
+    .firs_name {
+      background-image: url("img/person.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    .last_name {
+      background-image: url("img/person.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    .country {
+      background-image: url("img/country.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    .image {
+      background-image: url("img/nickname.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    .date_of_birth {
+      background-image: url("img/calendar.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    .bio {
+      background-image: url("img/bio.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+    }
+    button {
+      color: #789E9F;
+      text-align: center;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      border-radius: 20px;
+      background: #132124;
+      width: 550px;
+      height: 60px;
+      border: none;
+      transition-duration: .3s;
+      &:hover {
+        transition-duration: .3s;
+        background: #789E9F;
+        color: #132124;
+        cursor: pointer;
+      }
+    }
+  }
+}

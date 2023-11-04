@@ -1,21 +1,10 @@
-import { Routes, Route } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { store } from './store'
-import Layout from './pages/Layout/Layout.tsx'
-import Login from './pages/Login/Login.tsx'
-import Register from './pages/Register/Register.tsx'
+import { RouterProvider } from 'react-router-dom'
 import { type FC } from 'react'
+import router from './router.tsx'
 
 const App: FC = () => {
   return (
-      <Provider store={store}>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route path="/login" element={<Login />}/>
-            <Route path="/register" element={<Register />}/>
-          </Route>
-        </Routes>
-      </Provider>
+    <RouterProvider router={router}/>
   )
 }
 

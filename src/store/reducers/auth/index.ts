@@ -4,10 +4,12 @@ const initialState: AuthState = {
   user: {
     id: '',
     username: '',
-    avatar: ''
+    avatar: '',
+    role: []
   },
   isLogin: false,
-  token: ''
+  token: '',
+  isAdmin: false
 }
 
 export default function authReducer (state = initialState, action: AuthActions): AuthState {
@@ -16,6 +18,8 @@ export default function authReducer (state = initialState, action: AuthActions):
       return { ...state, user: action.payload }
     case AuthActionEnum.SET_LOGIN:
       return { ...state, isLogin: action.payload }
+    case AuthActionEnum.SET_ADMIN:
+      return { ...state, isAdmin: action.payload }
     case AuthActionEnum.SET_TOKEN:
       return { ...state, token: action.payload }
     default:
