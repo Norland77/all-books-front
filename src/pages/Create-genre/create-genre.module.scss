@@ -13,11 +13,9 @@
     > .login_block {
       display: flex;
       gap: 15px;
-      flex-direction: row;
-      align-items: start;
-      > div {
-        gap: 20px;
-        > span {
+      flex-direction: column;
+      align-items: center;
+      > span {
           color: #35ff00;
           font-size: 18px;
           font-style: italic;
@@ -26,7 +24,6 @@
           display: block;
         }
       }
-    }
     h2 {
       color: #C9E4E7;
       font-size: 30px;
@@ -39,6 +36,19 @@
       background: #263F44;
       height: 60px;
       width: 550px;
+      border: none;
+      color: #789E9F;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      padding: 5px 70px;
+    }
+    select {
+      border-radius: 20px;
+      background: #263F44;
+      height: 70px;
+      width:  690px;
       border: none;
       color: #789E9F;
       font-size: 18px;
@@ -61,41 +71,26 @@
       padding: 5px 70px;
       resize: none;
     }
-    .firs_name {
-      background-image: url("img/person.svg");
+    .name {
+      background-image: url("img/genre.svg");
       background-repeat: no-repeat;
       background-position: left;
       background-position-x: 15px;
+      background-size: 50px;
     }
-    .last_name {
-      background-image: url("img/person.svg");
-      background-repeat: no-repeat;
-      background-position: left;
-      background-position-x: 15px;
-    }
-    .country {
-      background-image: url("img/country.svg");
-      background-repeat: no-repeat;
-      background-position: left;
-      background-position-x: 15px;
-    }
-    .image {
-      background-image: url("img/nickname.svg");
-      background-repeat: no-repeat;
-      background-position: left;
-      background-position-x: 15px;
-    }
-    .date_of_birth {
-      background-image: url("img/calendar.svg");
-      background-repeat: no-repeat;
-      background-position: left;
-      background-position-x: 15px;
-    }
-    .bio {
+    .description {
       background-image: url("img/bio.svg");
       background-repeat: no-repeat;
       background-position: left;
       background-position-x: 15px;
+
+    }
+    .parentId {
+      background-image: url("img/genre.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+      background-size: 50px;
     }
     button {
       color: #789E9F;
